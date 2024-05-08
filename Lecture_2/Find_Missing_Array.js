@@ -1,4 +1,4 @@
-let arr=[1,3,4,5,6,7,8];
+let arr=[1,3,4,5,6,7,8,0];
 
 let n=arr.length;
 
@@ -23,4 +23,4 @@ const Sum_Value=(arr,n)=>{
 }
 
 //Call the function
-console.log(Sum_Value(arr,n) - Sum_Index(arr,n));
+console.log(Sum_Index(arr,n)-Sum_Value(arr,n));
