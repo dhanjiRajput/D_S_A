@@ -7,7 +7,6 @@ const sort = (arr) => {
         {
             if (arr[j] > arr[j + 1])
             {
-                // Swap the elements.
                 const temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
@@ -16,7 +15,6 @@ const sort = (arr) => {
     }
     return arr;
 }
-
 console.log(sort(arr));
 
 
