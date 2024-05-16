@@ -18,21 +18,21 @@ for(let i=0;i<r;i++){
 
 //Print Row Wise MAximum Number
 console.log("\n Print Maximum Number Element......");
-let max=0;
-let maxrow=-1;
 
-for(let i=0;i<r;i++){
-    let count=0;
-    for(j=0;j<c;j++){
-        if(arr[i][j]==1){
-            count++;
-        }
-    }
-    if(count>max)
-    {
-        max=count;
-        maxrow=i+1;
-    }
+// const find_max=(arr)=>{
+//     let max=arr[0];
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]>max){
+//             max=arr[i];
+//         }
+//         console.log(max);
+//     }
+// }
+
+// for(let i=0;i<arr.length;i++){
+//     find_max(arr);
+// }
+
+for(let i=0;i<arr.length;i++){
+    console.log(Math.max(...arr[i]));
 }
-
-console.log(maxrow,max);
