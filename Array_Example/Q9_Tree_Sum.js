@@ -1,21 +1,26 @@
 let arr = [1, 2, 3, 4, 3, 5, 6, 10, 20, 30];
+let l=arr.length;
+let currsum=0;
+let maxsum=0;
 
-const find_tree_sum = (arr) => {
-    let arr2 = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        arr2[i] = arr[i];
+for(let i=0;i<l;i++){
+    if(arr[i]<arr[i+1]){
+        currsum=currsum+arr[i];
     }
-
-    for (let i = 1; i < arr.length; i++) {
-        for (let j = 0; j < i; j++) {
-            if (arr[i] > arr[j] && arr2[i] < arr2[j] + arr[i]) {
-                arr2[i] = arr2[j] + arr[i];
-            }
+    else{
+        currsum=currsum+arr[i];
+        if(maxsum<currsum){
+            maxsum=currsum;
         }
+        currsum=0;
     }
 
-    return Math.max(...arr2);
+    if(i+1==l-1){
+        currsum+=arr[i+1]
+        if(maxsum<currsum){
+            maxsum=currsum;
+        }
+        currsum=0;
+    }
 }
-
-console.log(find_tree_sum(arr));
+console.log(maxsum);
