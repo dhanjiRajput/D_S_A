@@ -15,36 +15,49 @@ class Stack {
         }
     }
 
-    pop(){
-        if(this.index != -1){
-            this.items[this.index--]=-1;
-        }else{
+    pop() {
+        if (this.index != -1) {
+            this.items[this.index--] = -1;
+        } else {
             console.log("Nothing to POP");
         }
     }
 
-    peak(){
-        if(this.index !=-1){
-            let val=this.items[this.index];
+    peak() {
+        if (this.index != -1) {
+            let val = this.items[this.index];
             return val;
         }
     }
 
-    lenght(){
-        return this.index+1;
+    lenght() {
+        return this.index + 1;
     }
 
-    isEmpty(){
-        if(this.index==-1){
+    isEmpty() {
+        if (this.index == -1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
+
+    reverse() {
+        let arr=[4];
+        if (this.index != -1) {
+            for(let i=0;i<this.lenght();i++){
+                arr[i]=this.items.pop();
+            }
+        }
+        console.log(arr);
+    }
 };
 
-let stk = new Stack(5);
+let stk = new Stack(4);
 
-stk.push(1);
+stk.push("j");
+stk.push("a");
+stk.push("v");
+stk.push("a");
 
-console.log(stk.lenght());
+console.log(stk.reverse());
